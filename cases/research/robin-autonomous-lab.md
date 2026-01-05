@@ -4,12 +4,12 @@ slug: robin-autonomous-lab
 entity_type: research
 status: published
 data_completeness: very_high
-last_researched: 2025-01-27
+last_researched: 2026-01-06
 research_category: collaboration
 researcher: AI Assistant
-version: 3.1
+version: 3.2
 name: Robin - Autonomous Lab System
-description: First fully autonomous scientific discovery system that can generate hypotheses, plan experiments, analyze results, and update hypotheses in a closed-loop manner. The system integrates literature search agents with data analysis agents to automate the entire scientific discovery process.
+description: First fully autonomous scientific discovery system that can generate hypotheses, plan experiments, analyze results, and update hypotheses in a closed-loop manner. The system integrates literature search agents with data analysis agents to automate the entire scientific discovery process. Published in May 2025, Robin was later evolved into Kosmos (November 2025, arXiv:2511.02824) by the same research team from Edison Scientific and FutureHouse. Kosmos introduced structured world models, achieving 9.8x increase in code generation (42,000 vs 4,310 lines) and 8x more iterations (200 vs ~25 rollouts), enabling longer research cycles and multi-domain discoveries.
 mission: To develop and demonstrate fully autonomous scientific discovery systems that can accelerate research by autonomously generating hypotheses, planning experiments, and discovering novel therapeutic strategies for age-related diseases.
 entity_data:
   results:
@@ -59,14 +59,14 @@ organizations:
     role_description: Potential funding source
     contribution_description: Research foundation that may have provided funding or support for autonomous research systems. Specific funding details not publicly disclosed.
   -
-    name: Future House
+    name: FutureHouse Inc.
     role: primary
-    org_type: research_center
-    legal_name: Future House
+    org_type: company
+    legal_name: FutureHouse Inc.
     website: "https://futurehouse.org"
-    status: active
+    status: operational
     role_description: Primary organization
-    contribution_description: Research organization focused on developing AI systems for autonomous scientific discovery. Primary research organization leading the project.
+    contribution_description: Research and development company focused on developing AI systems for autonomous scientific discovery. Primary organization leading the Robin project. Multiple authors affiliated with FutureHouse.
   -
     name: Cornell University
     role: collaborator
@@ -84,8 +84,23 @@ organizations:
     role_description: Collaborating institution
     contribution_description: "Andrew D. White's lab contributed expertise in machine learning for scientific discovery. Provided machine learning and AI expertise."
 products:
-  -
-    name: Ripasudil
+  - name: Robin Autonomous Lab System
+    type: platform
+    status: published
+    development_stage: Research / Preclinical
+    description: Multi-agent LLM system for autonomous scientific discovery using lab-in-the-loop framework. First system to autonomously discover validated therapeutic candidate.
+    capabilities:
+      - Autonomous hypothesis generation from literature
+      - Experimental protocol design
+      - Result analysis and interpretation
+      - Iterative hypothesis refinement
+      - Wet-lab experiment integration
+    technical_details:
+      code_generation: ~4,310 lines per run
+      literature_analysis: ~1,530 papers per run
+      framework: Lab-in-the-loop (AI directs, humans execute)
+      validation: Experimentally validated therapeutic discovery
+  - name: Ripasudil
     type: drug
     status: preclinical
     development_stage: Research / Preclinical
@@ -112,7 +127,32 @@ links:
 
 ## Description
 
-First fully autonomous scientific discovery system that can generate hypotheses, plan experiments, analyze results, and update hypotheses in a closed-loop manner. The system integrates literature search agents with data analysis agents to automate the entire scientific discovery process.
+Robin is the first fully autonomous scientific discovery system that can generate hypotheses, plan experiments, analyze results, and update hypotheses in a closed-loop manner. The system integrates literature search agents with data analysis agents to automate the entire scientific discovery process, demonstrating the viability of AI-driven therapeutic discovery.
+
+Using a multi-agent LLM architecture, Robin performs automated cycles of literature search and data analysis to propose evidence-based hypotheses. The system operates in a "lab-in-the-loop" framework where AI agents design experiments and analyze results, while human researchers execute the wet-lab experimental work. This semi-autonomous approach enables Robin to explore hypothesis spaces too large for manual investigation while maintaining practical feasibility through human-executed experiments.
+
+Robin successfully identified Ripasudil, a ROCK inhibitor, as a novel therapeutic candidate for dry age-related macular degeneration (AMD)—marking the first time this drug was proposed for this indication. The discovery demonstrates AI's ability to make cross-domain connections beyond typical human cognitive capacity, linking glaucoma treatment knowledge with retinal phagocytosis mechanisms. The therapeutic mechanism was validated experimentally via RNA-seq, showing that ROCK inhibition upregulates ABCA1, enhancing phagocytic capacity in retinal cells.
+
+The system generates an average of 4,310 lines of code and reads approximately 1,530 scientific papers per research run, achieving 3-10x speed improvement over traditional research cycles. Robin compresses the typical hypothesis-to-validation timeline from 7-30 months to 2-7 months, demonstrating substantial acceleration of scientific discovery.
+
+### Relationship to Kosmos
+
+**Robin (May 2025)** served as the foundation for **Kosmos (November 2025)**. The same research team from Edison Scientific (Andrew D. White, Samuel G. Rodriques) created Kosmos as an evolution of Robin, addressing its identified limitations. In the Kosmos paper (arXiv:2511.02824), the authors explicitly state: *"Robin [1], a system we previously reported, performs automated cycles of literature search and data analysis to propose evidence-based hypotheses, but has limited context sharing between its agents and is primarily tailored for therapeutics development."*
+
+**Robin → Kosmos Evolution:**
+- **Code Generation**: 4,310 → 42,000 lines (**9.8x increase**)
+- **Agent Rollouts**: ~25 → 200 (**8x increase**)  
+- **Research Duration**: Short cycles → 12 hours continuous
+- **Context Sharing**: Limited → Structured World Model
+- **Domains**: Therapeutics focus → 6 scientific domains
+- **Discoveries**: 1 therapeutic → 7 discoveries (metabolomics, materials, neuroscience, genetics)
+- **Accuracy**: Not reported → 79.4% validated by independent scientists
+
+**Key Innovation in Kosmos:** Introduction of **structured world model** that coordinates all agents and enables the system to maintain coherence 8x longer without losing focus on research objectives.
+
+**Shared Authors:** Andrew D. White, Samuel G. Rodriques, Ludovico Mitchener, Angela Yiu, Benjamin Chang, Michaela M. Hinks, Jon M. Laurent
+
+**In Simple Terms:** Robin = first-generation autonomous AI scientist (proof-of-concept), Kosmos = next-generation system (8-10x more powerful, works across multiple scientific domains beyond just therapeutics).
 
 ## Mission
 
@@ -120,59 +160,157 @@ To develop and demonstrate fully autonomous scientific discovery systems that ca
 
 ## Project Information
 
-**Start Date**: 2024
-**Publication Date**: 2025-05-19
-**Objectives**: Develop fully autonomous scientific discovery system,Demonstrate AI can autonomously generate hypotheses, plan experiments, and analyze results,Apply system to discover novel therapeutic strategies for age-related diseases,Validate lab-in-the-loop framework for autonomous scientific discovery
-**Methodology**: [object Object]
-**Results**: [object Object]
-**Collaboration Period**: [object Object]
+**Start Date**: 2024  
+**Publication Date**: 2025-05-19  
+**Status**: Published on arXiv
+
+**Objectives:**
+- Develop fully autonomous scientific discovery system
+- Demonstrate AI can autonomously generate hypotheses, plan experiments, and analyze results
+- Apply system to discover novel therapeutic strategies for age-related diseases
+- Validate lab-in-the-loop framework for autonomous scientific discovery
+
+**Methodology:**
+- Type: Multi-agent LLM System
+- Framework: Lab-in-the-loop
+- Integration Level: Semi-autonomous (AI directs experiments, humans execute)
+
+**Key Results:**
+- AI Achievement: First fully autonomous scientific discovery where entire main text hypotheses, experiments, and figures were produced by AI
+- Primary Discovery: Ripasudil (ROCK inhibitor) identified as novel therapeutic candidate for dry AMD
+- Validation: Mechanism validated experimentally via RNA-seq
+- Mechanism: ROCK inhibition upregulates ABCA1, enhancing phagocytosis in retinal cells
+
+**Collaboration Period:**
+- Start: 2024
+- Status: Active
 
 ## AI Methods
 
-- Multi-agent LLM System
-- Literature Search Agents
-- Data Analysis Agents
-- Experimental Execution Integration
-- Structured Hypothesis Generation
+- **Multi-agent LLM System**: Coordinates multiple AI agents for different research tasks
+- **Literature Search Agent**: Searches and synthesizes scientific literature (~1,530 papers per run)
+- **Data Analysis Agent**: Executes statistical analyses and generates visualizations (~4,310 lines of code per run)
+- **Hypothesis Generation**: Automated generation of evidence-based hypotheses from literature
+- **Experimental Planning**: AI-driven design of wet-lab experimental protocols
+- **Result Interpretation**: Automated analysis of experimental results
+- **Iterative Refinement**: Closed-loop hypothesis-experiment-analysis cycles
 
 ## Data Types
 
-- Scientific Literature
-- RNA-seq Data
-- Experimental Protocols
+- **Scientific Literature**: Research papers, reviews, clinical studies
+- **Experimental Data**: RNA-seq data from validation experiments
+- **Biological Data**: Gene expression, protein interactions, pathway data
+- **Clinical Data**: Disease phenotypes, therapeutic outcomes
+- **Experimental Protocols**: Detailed methods for wet-lab execution
 
-## Platforms
+## Platforms and Technologies
 
-- Python 3.12+
-- LiteLLM
-- FutureHouse API
+- **Programming**: Python 3.12+
+- **LLM Integration**: LiteLLM for multi-model support
+- **API**: FutureHouse API for agent coordination
+- **Analysis Tools**: Statistical analysis packages, bioinformatics tools
+- **Data Processing**: RNA-seq analysis pipelines
+- **Version Control**: GitHub (https://github.com/Future-House/robin)
 
 ## System Architecture
 
 ```yaml
 type: Multi-agent LLM System
+framework: Lab-in-the-loop
+integration_level: Semi-autonomous (AI directs experiments, humans execute wet-lab work)
 components:
-  - Literature Search Agents
-  - Data Analysis Agents
-  - Hypothesis Generation System
-  - Experimental Planning System
-  - Result Interpretation System
-description: Robin integrates multiple specialized AI agents to automate the scientific discovery process
+  - Literature Search Agent:
+      description: Searches and synthesizes scientific literature
+      capabilities:
+        - Search scientific databases
+        - Read and analyze papers
+        - Extract relevant information
+        - Synthesize literature findings
+      average_performance: ~1,530 papers per run
+  - Data Analysis Agent:
+      description: Performs statistical analysis and data processing
+      capabilities:
+        - Execute code for data analysis
+        - Generate statistical models
+        - Test hypotheses
+        - Process datasets
+      average_performance: ~4,310 lines of code per run
+  - Hypothesis Generation System:
+      description: Generates scientific hypotheses from literature and data
+      capabilities:
+        - Cross-domain hypothesis generation
+        - Evidence-based hypothesis formulation
+        - Iterative hypothesis refinement
+  - Experimental Planning System:
+      description: Plans wet-lab experiments to test hypotheses
+      capabilities:
+        - Design experimental protocols
+        - Specify materials and methods
+        - Plan validation experiments
+  - Result Interpretation System:
+      description: Analyzes experimental results and updates hypotheses
+      capabilities:
+        - Interpret experimental outcomes
+        - Update hypotheses based on results
+        - Plan next experimental steps
+key_innovation: Integration of literature search with data analysis for automated hypothesis-experiment cycles
+context_sharing: Limited context sharing between agents (addressed in later Kosmos system)
+primary_focus: Therapeutics development for age-related diseases
 ```
 
 ## Technical Workflow
 
 ```yaml
-workflow:
-  - 1. AI generates hypothesis from literature
-  - 2. AI plans experiment
-  - 3. Human researchers execute experiment
-  - 4. AI analyzes results
-  - 5. AI updates hypothesis and plans next experiment
-  - 6. Repeat until validation
-framework: Lab-in-the-loop
-description: AI system directs wet-lab experiments iteratively, creating a closed-loop discovery process
-integration_level: Semi-autonomous - AI directs experiments, humans execute
+lab_in_the_loop_process:
+  description: AI system directs wet-lab experiments iteratively, creating a closed-loop discovery process
+  integration_level: Semi-autonomous - AI directs experiments, humans execute
+  human_role: Execute wet-lab experiments designed by AI
+  ai_role: Generate hypotheses, plan experiments, analyze results
+detailed_workflow:
+  step_1_hypothesis_generation:
+    description: AI generates hypothesis from literature
+    process:
+      - Literature search agent reviews scientific literature
+      - Identifies knowledge gaps and opportunities
+      - Generates testable hypotheses
+    output: Evidence-based hypothesis
+  step_2_experimental_planning:
+    description: AI plans experiment to test hypothesis
+    process:
+      - Design experimental protocol
+      - Specify materials, methods, conditions
+      - Plan data collection strategy
+    output: Detailed experimental protocol
+  step_3_human_execution:
+    description: Human researchers execute experiment
+    process:
+      - Follow AI-generated protocol
+      - Perform wet-lab experiments
+      - Collect experimental data
+    output: Experimental data (e.g., RNA-seq data)
+  step_4_data_analysis:
+    description: AI analyzes experimental results
+    process:
+      - Data analysis agent processes experimental data
+      - Statistical analysis and visualization
+      - Interpretation of results
+    output: Analysis results and interpretation
+  step_5_hypothesis_update:
+    description: AI updates hypothesis and plans next experiment
+    process:
+      - Evaluate if hypothesis supported or refuted
+      - Refine hypothesis based on results
+      - Generate next experimental questions
+    output: Updated hypothesis and next experiment plan
+  step_6_iteration:
+    description: Repeat until validation
+    process: Cycle continues until hypothesis fully validated
+    outcome: Validated therapeutic candidate (Ripasudil for dry AMD)
+performance:
+  code_generation: ~4,310 lines per run
+  literature_analysis: ~1,530 papers per run
+  iteration_speed: 3-10x faster than manual research
+  discovery_timeline: 2-7 months (vs. 7-30 months traditional)
 ```
 
 ## Scientific Background
@@ -214,10 +352,18 @@ autonomous_lab_systems_history:
 ## Performance Metrics
 
 ```yaml
+computational_performance:
+  code_generation: Average 4,310 lines of code per run
+  literature_analysis: Average 1,530 papers read per run
+  agent_rollouts: Multiple agent iterations per research cycle
 search_space: Can explore hypothesis space too large for manual exploration (ROCK inhibitors × retinal biology × aging pathways)
 speed_improvement: 3-10x faster per iteration
 literature_integration: Can integrate thousands of literature sources with experimental design beyond human cognitive capacity
 hypothesis_to_validation_cycle: 2-7 months (vs. 7-30 months traditional)
+discovery_success:
+  therapeutic_candidate: Ripasudil identified for dry AMD
+  validation: Mechanism validated via RNA-seq
+  clinical_relevance: Potential treatment for major age-related disease
 ```
 
 ## Lessons Learned
@@ -232,14 +378,104 @@ hypothesis_to_validation_cycle: 2-7 months (vs. 7-30 months traditional)
 
 ### Challenges
 
-- Integration of AI agents with wet-lab experimental execution
-- Ensuring experimental protocols are feasible and safe
-- Balancing AI autonomy with human oversight
-- Scaling to more complex experimental systems
+**AI-Human Integration:**
+- Integration of AI agents with wet-lab experimental execution requires careful coordination
+- Ensuring experimental protocols are feasible, safe, and executable by human researchers
+- Balancing AI autonomy with necessary human oversight for safety and quality control
+- Time delays between AI planning and human execution of experiments
+
+**Technical Challenges:**
+- Limited context sharing between agents (compared to later systems with structured world models)
+- Scaling to more complex experimental systems beyond single therapeutic discovery
+- Managing coherence across multiple research cycles
+- Computational resource requirements for long-running agent processes
+
+**Domain-Specific Challenges:**
+- Primarily tailored for therapeutics development
+- Wet-lab validation required for all hypotheses (cannot be fully in silico)
+- Access to laboratory facilities and materials needed
+- Time and cost of experimental validation
+
+**Quality Control:**
+- Ensuring AI-generated hypotheses are scientifically valid
+- Verifying experimental protocols are appropriate
+- Validating AI interpretations of experimental results
+- Maintaining scientific rigor in autonomous discovery process
 
 ### Impact on Field
 
-Robin represents a paradigm shift toward fully autonomous scientific discovery. It demonstrates that AI systems can not only assist researchers but can autonomously generate novel hypotheses, design experiments, and discover new therapeutic strategies. This has transformative implications for aging research and drug discovery, potentially compressing decades of research into years through autonomous discovery systems.
+Robin represents a paradigm shift toward fully autonomous scientific discovery in biomedical research. It demonstrates that AI systems can not only assist researchers but can autonomously generate novel hypotheses, design experiments, and discover new therapeutic strategies. This has transformative implications for aging research and drug discovery, potentially compressing decades of research into years through autonomous discovery systems.
+
+**Key Contributions to Field:**
+- **First Autonomous Therapeutic Discovery**: Robin is the first AI system to autonomously discover a novel therapeutic candidate (Ripasudil for dry AMD) through closed-loop hypothesis-experiment cycles
+- **Lab-in-the-Loop Framework**: Established viable framework for AI-human collaboration in experimental science
+- **Cross-Domain Discovery**: Demonstrated AI's ability to make unexpected connections across different medical domains (glaucoma treatment → retinal phagocytosis)
+- **Validated Mechanism**: AI-discovered mechanism validated experimentally, proving reliability of autonomous discovery
+- **Acceleration of Research**: 3-10x speed improvement demonstrates practical value for research acceleration
+
+**Broader Implications:**
+- Opens pathway for AI-driven drug repurposing at scale
+- Demonstrates feasibility of autonomous systems in wet-lab science
+- Provides template for future autonomous research systems
+- Shows potential for AI to discover connections beyond human cognitive capacity
+- Establishes proof-of-concept for autonomous therapeutic discovery in aging research
+
+**Limitations Identified:**
+- Limited context sharing between agents (addressed in subsequent systems)
+- Primary focus on therapeutics (later systems expanded to multiple domains)
+- Requires human execution of experiments (semi-autonomous rather than fully autonomous)
+
+Robin's success demonstrated the viability of autonomous AI scientists and laid groundwork for next-generation systems with improved context management and broader scientific applicability.
+
+## Evolution to Kosmos (November 2025)
+
+**Robin** (May 2025) was evolved into **Kosmos** (November 2025, arXiv:2511.02824) by the same research team from Edison Scientific and FutureHouse:
+
+```yaml
+timeline:
+  robin_publication: May 2025 (arXiv:2505.13400)
+  kosmos_publication: November 2025 (arXiv:2511.02824)
+  time_between: 6 months
+same_research_team:
+  organization: Edison Scientific Inc. and FutureHouse Inc.
+  shared_leaders:
+    - Andrew D. White (co-supervisor in both systems)
+    - Samuel G. Rodriques (PI Robin → co-supervisor Kosmos)
+  shared_core_developers:
+    - Ludovico Mitchener (co-author Robin → co-first author + co-supervisor Kosmos)
+    - Angela Yiu (co-author Robin → co-first author Kosmos)
+    - Benjamin Chang (co-author Robin → co-first author Kosmos)
+    - Michaela M. Hinks (co-author Robin → co-supervisor Kosmos)
+    - Jon M. Laurent (co-author in both)
+robin_limitations:
+  context_sharing: Limited context sharing between agents
+  domain_focus: Primarily tailored for therapeutics development
+  iteration_limit: Could not maintain coherence beyond ~25 rollouts
+  research_duration: Shorter research cycles
+kosmos_improvements:
+  structured_world_model: Enables information sharing between all agents
+  code_generation: 9.8x increase (42,000 vs 4,310 lines per run)
+  iterations: 8x more rollouts (200 vs ~25)
+  duration: Up to 12 hours continuous operation (vs shorter cycles)
+  domains: Multi-domain capability (6 domains demonstrated vs therapeutics focus)
+  coherence: Maintains goal pursuit over 200 rollouts without losing coherence
+  traceability: All statements cited to code or primary literature
+  discoveries: 7 validated discoveries across metabolomics, materials science, connectomics, genetics, proteomics, transcriptomics
+  accuracy: 79.4% validated by independent scientists
+kosmos_key_innovation:
+  structured_world_model:
+    description: Shared information structure that consolidates findings from all agents
+    benefit: Enables every cycle to build on all previous findings
+    result: Can explore many research avenues simultaneously while maintaining coherence
+    comparison: Robin had limited context sharing, Kosmos has systematic context management
+relationship:
+  robin: Proof-of-concept for autonomous scientific discovery with lab-in-the-loop
+  kosmos: Next-generation system scaling Robin's approach to longer cycles and multiple domains
+  evolution: Kosmos built on Robin's success, addressing identified limitations
+quote_from_kosmos_paper: "Robin [1], a system we previously reported, performs automated cycles of literature search and data analysis to propose evidence-based hypotheses, but has limited context sharing between its agents and is primarily tailored for therapeutics development."
+```
+
+**Conclusion:** Robin proved the viability of autonomous AI scientists. Kosmos scaled this approach 8-10x by adding structured world model for managing multiple agents across extended research cycles.
 
 ## Organizations
 
@@ -251,15 +487,15 @@ Robin represents a paradigm shift toward fully autonomous scientific discovery. 
 **Status**: active
 **Description**: Research foundation that may have provided funding or support
 
-### Future House
+### FutureHouse Inc.
 **Role in Project**: primary
 **Role Description**: Primary organization
-**Contribution**: Research organization focused on developing AI systems for autonomous scientific discovery. Primary research organization leading the project.
-**Organization Type**: research_center
-**Status**: active
+**Contribution**: Research and development company focused on developing AI systems for autonomous scientific discovery. Primary organization leading the Robin project. Majority of authors affiliated with FutureHouse including first author Ali Essam Ghareeb and PI Samuel G. Rodriques.
+**Organization Type**: company
+**Status**: operational
 **Website**: https://futurehouse.org
-**Description**: Research organization focused on developing AI systems for autonomous scientific discovery
-**Focus**: AI systems for autonomous scientific discovery
+**Description**: Research and development company focused on developing AI systems for autonomous scientific discovery. Located in San Francisco, CA.
+**Focus**: AI systems for autonomous scientific discovery, autonomous laboratory systems
 
 ### Cornell University
 **Role in Project**: collaborator
@@ -279,12 +515,21 @@ Robin represents a paradigm shift toward fully autonomous scientific discovery. 
 
 ## Locations
 
+### FutureHouse Inc. Headquarters
+**Type**: headquarters
+**City**: San Francisco
+**State/Region**: California
+**Country**: USA
+**Organizations**: FutureHouse Inc.
+**Description**: Primary location for Robin project development and autonomous research systems
+
 ### University of Rochester Main Campus
 **Type**: institution
 **City**: Rochester
 **State/Region**: New York
 **Country**: USA
 **Organizations**: University of Rochester
+**Description**: Collaborating institution providing machine learning expertise
 
 ### Cornell University Main Campus
 **Type**: institution
@@ -292,78 +537,144 @@ Robin represents a paradigm shift toward fully autonomous scientific discovery. 
 **State/Region**: New York
 **Country**: USA
 **Organizations**: Cornell University
+**Description**: Collaborating institution providing research expertise and laboratory facilities
 
 ## Products
 
-### Ripasudil
+### Ripasudil (ROCK Inhibitor for Dry AMD)
 **Type**: drug
 **Status**: preclinical
 **Development Stage**: Research / Preclinical
 **Role in Project**: discovery
-**Relationship Description**: Ripasudil (ROCK inhibitor) discovered by Robin AI system as potential therapeutic candidate for dry AMD. First time Ripasudil was proposed for dry AMD treatment. Discovery demonstrates AI's ability to make cross-domain connections beyond human cognitive capacity.
-**Description**: ROCK inhibitor discovered by Robin AI system as potential therapeutic candidate for dry age-related macular degeneration (dAMD). Mechanism: ROCK inhibition → ABCA1 upregulation → Enhanced phagocytosis in retinal cells.
+**Relationship Description**: Ripasudil (ROCK inhibitor) discovered by Robin AI system as potential therapeutic candidate for dry AMD through autonomous hypothesis generation and experimental validation. First time Ripasudil was proposed for dry AMD treatment. Discovery demonstrates AI's ability to make cross-domain connections beyond human cognitive capacity.
+**Description**: ROCK (Rho-kinase) inhibitor autonomously identified by Robin AI system as novel therapeutic candidate for dry age-related macular degeneration (dAMD). Robin made unexpected cross-domain connection between glaucoma treatment (where Ripasudil is approved in Japan) and retinal phagocytosis mechanisms in AMD. Discovery validated experimentally via RNA-seq showing mechanism: ROCK inhibition → ABCA1 upregulation → Enhanced phagocytosis in retinal pigment epithelium cells.
 **Mechanism of Action**: ROCK inhibition → ABCA1 upregulation → Enhanced phagocytosis in retinal cells
-**Target**: Rho-kinase (ROCK)
-**Pathway**: ROCK inhibitor → ABCA1 lipid efflux pump upregulation → Increased phagocytosis in retinal pigment epithelium
-**Indications**: [
-  {
-    "status": "preclinical",
-    "primary": "Dry Age-related Macular Degeneration (dAMD)",
-    "description": "Leading cause of blindness in developed countries. Characterized by dysfunction of retinal pigment epithelium and accumulation of drusen."
-  }
-]
+**Target**: Rho-kinase (ROCK), key regulator of cytoskeletal dynamics
+**Pathway**: ROCK inhibitor → ABCA1 lipid efflux pump upregulation → Increased phagocytic capacity → Improved RPE function
+**Indications**:
+```yaml
+primary_indication:
+  disease: Dry Age-related Macular Degeneration (dAMD)
+  status: preclinical
+  prevalence: Leading cause of blindness in developed countries, affecting millions
+  pathology: Characterized by RPE dysfunction, drusen accumulation, geographic atrophy
+  current_treatments: Limited - no approved treatments for dry AMD (only for wet AMD)
+  unmet_need: Urgent need for effective dry AMD treatments
+  robin_discovery: First proposal of Ripasudil for dry AMD indication
+```
+**Clinical Relevance**:
+```yaml
+existing_approval: Ripasudil approved for glaucoma treatment in Japan
+safety_profile: Established safety profile from glaucoma use
+development_advantage: Known safety could accelerate development for dry AMD
+novel_mechanism: New application for retinal phagocytosis enhancement (not just IOP reduction)
+cross_domain_insight: Links glaucoma pharmacology with retinal disease biology
+```
 **Technical Details**:
 ```yaml
-significance: "First time Ripasudil was proposed for dry AMD treatment. Discovery demonstrates AI's ability to make cross-domain connections beyond human cognitive capacity."
-discovery_method: AI-autonomous discovery
-discovery_system: Robin - Autonomous Lab System
+significance: First time Ripasudil was proposed for dry AMD treatment. Discovery demonstrates AI's ability to make cross-domain connections beyond human cognitive capacity.
+discovery_method: AI-autonomous discovery via Robin system
 validation_status: Mechanism validated experimentally via RNA-seq
+validation_results: Confirmed ROCK inhibition upregulates ABCA1
 detailed_mechanism:
-  step_1: Ripasudil inhibits Rho-kinase (ROCK), a key regulator of cytoskeletal dynamics
+  step_1: Ripasudil inhibits Rho-kinase (ROCK), key regulator of cytoskeletal dynamics
   step_2: ROCK inhibition leads to upregulation of ABCA1 (ATP-binding cassette sub-family A member 1)
   step_3: Enhanced ABCA1 function improves phagocytic capacity of RPE cells
+  step_4: Improved phagocytosis reduces drusen accumulation and RPE dysfunction
 biological_rationale:
-  abca1_importance: ABCA1 mutations cause Tangier disease with retinal abnormalities, highlighting its importance in retinal health
-  dry_amd_pathology: Dry AMD is characterized by RPE dysfunction, drusen accumulation, and impaired phagocytosis
-  therapeutic_strategy: Enhancing RPE phagocytosis could slow or reverse disease progression
+  abca1_importance: ABCA1 mutations cause Tangier disease with retinal abnormalities, highlighting its critical role in retinal health
+  dry_amd_pathology: Dry AMD characterized by RPE dysfunction, drusen accumulation, impaired phagocytosis
+  therapeutic_strategy: Enhancing RPE phagocytic capacity could slow or reverse disease progression
+  literature_support: Robin integrated literature on ROCK inhibitors, ABCA1 biology, and AMD pathology
+discovery_process:
+  literature_search: Thousands of papers analyzed on ROCK inhibitors, retinal biology, AMD
+  hypothesis_generation: AI proposed ROCK inhibition could enhance retinal phagocytosis
+  experimental_design: RNA-seq experiment designed to validate mechanism
+  result_validation: Confirmed ABCA1 upregulation via experimental data
 ```
 
 ## Key People
 
-### Jon M. Laurent
+### Ali Essam Ghareeb
 **Participation Type**: researcher
-**Role in Project**: Co-author
+**Role in Project**: First Author
 **Affiliations**: Future House
+**Contribution**: First author of Robin paper. Led the research on autonomous lab system development and application to dry AMD therapeutic discovery.
+**Expertise**: Autonomous laboratory systems, therapeutic discovery, multi-agent AI systems
+**Biography**: Researcher at Future House, first author focusing on autonomous scientific discovery systems
 
-### Caralyn J. Szostkiewicz
-**Participation Type**: researcher
-**Role in Project**: Co-author
-**Affiliations**: Future House
+### Samuel G. Rodriques
+**Participation Type**: pi
+**Role in Project**: Principal Investigator / Corresponding Author
+**Affiliations**: Future House, Cornell University
+**Contribution**: Principal Investigator and Corresponding Author. Overall project leadership, scientific direction, development of autonomous laboratory systems framework, multi-institutional collaboration coordination.
+**Expertise**: Autonomous laboratory systems, scientific discovery automation, neurotechnology
+**Biography**: Research scientist at Future House and Cornell University, expert in autonomous laboratory systems and scientific discovery automation
 
-### Benjamin Chang
+### Andrew D. White
+**Title**: Professor
 **Participation Type**: researcher
-**Role in Project**: Co-author
-**Affiliations**: Future House
+**Role in Project**: Co-author, Senior Researcher
+**Affiliations**: University of Rochester
+**Contribution**: Professor of Chemical Engineering. Contributed machine learning and AI expertise for autonomous scientific discovery. Senior advisor on AI methods and system architecture.
+**Expertise**: Machine learning for scientific discovery, Chemical Engineering, AI for drug discovery
+**Biography**: Professor of Chemical Engineering at University of Rochester, expert in applying machine learning to scientific discovery
 
 ### Ludovico Mitchener
 **Participation Type**: researcher
-**Role in Project**: Co-author
+**Role in Project**: Co-author, Core Developer
 **Affiliations**: Future House
+**Contribution**: Core developer of Robin system. Contributed to system architecture, multi-agent coordination, and autonomous hypothesis generation.
+**Expertise**: AI systems, autonomous scientific discovery, Multi-agent systems
+**Biography**: Researcher at Future House specializing in autonomous AI scientists
+
+### Angela Yiu
+**Participation Type**: researcher
+**Role in Project**: Co-author, Core Developer
+**Affiliations**: Future House
+**Contribution**: Core developer of Robin system. Contributed to system development and research coordination.
+**Expertise**: AI systems, autonomous scientific discovery
+**Biography**: Researcher at Future House working on autonomous AI scientists
+
+### Benjamin Chang
+**Participation Type**: researcher
+**Role in Project**: Co-author, Core Developer
+**Affiliations**: Future House
+**Contribution**: Core developer of Robin system. Contributed to system architecture and performance evaluation.
+**Expertise**: AI systems, system evaluation, autonomous research
+**Biography**: Researcher at Future House developing autonomous research systems
 
 ### Michaela M. Hinks
 **Participation Type**: researcher
 **Role in Project**: Co-author
 **Affiliations**: Future House
+**Contribution**: Contributed to Robin system development and scientific evaluation of discovery outputs.
+**Expertise**: Scientific evaluation, AI systems for research
+**Biography**: Researcher at Future House focusing on AI-driven scientific discovery
+
+### Jon M. Laurent
+**Participation Type**: researcher
+**Role in Project**: Co-author
+**Affiliations**: Future House
+**Contribution**: Contributed to software development and system architecture of Robin.
+**Expertise**: Software engineering, computational biology
+**Biography**: Researcher at Future House, software engineer for autonomous research systems
+
+### Caralyn J. Szostkiewicz
+**Participation Type**: researcher
+**Role in Project**: Co-author
+**Affiliations**: Future House
+**Contribution**: Contributed to Robin system development and research execution.
+**Expertise**: Autonomous research systems
+**Biography**: Researcher at Future House
 
 ### Muhammed T. Razzak
 **Participation Type**: researcher
 **Role in Project**: Co-author
 **Affiliations**: Future House
-
-### Angela Yiu
-**Participation Type**: researcher
-**Role in Project**: Co-author
-**Affiliations**: Future House
+**Contribution**: Contributed to Robin system development and research execution.
+**Expertise**: Autonomous research systems, AI agents
+**Biography**: Researcher at Future House
 
 ### Andrew D. White
 **Title**: Professor
@@ -430,6 +741,24 @@ doi: 10.48550/arXiv.2505.13400
 type: Preprint
 venue: arXiv
 arxiv_id: 2505.13400
+```
+
+### [Kosmos: An AI Scientist for Autonomous Discovery](https://arxiv.org/abs/2511.02824)
+**Type**: research_publication
+**Relevance**: secondary
+**Category**: related
+**Relationship Description**: Related autonomous AI scientist system from overlapping research group. References Robin as prior work and reports 9.8x increase in code generation through structured world models.
+**Publisher**: arXiv
+**Publication Date**: 2025-11-04
+**Authors**: Ludovico Mitchener, Angela Yiu, Benjamin Chang, Andrew D. White, Samuel G. Rodriques, Michaela M. Hinks, and 30 co-authors
+**Description**: Next-generation autonomous AI scientist system that addresses context sharing limitations through structured world models, enabling longer-duration research cycles and multi-domain scientific discovery
+**Metadata**:
+```yaml
+doi: 10.48550/arXiv.2511.02824
+type: arXiv Preprint
+arxiv_id: 2511.02824
+relationship: Related autonomous research system with overlapping authors
+comparison: 9.8x increase in code generation, 8x more iterations, structured world model innovation
 ```
 
 ## Events

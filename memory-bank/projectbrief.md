@@ -6,13 +6,13 @@ Community-driven database of AI applications in longevity research and aging int
 
 ## Data Scope
 
-- **60 case studies total**
-  - 32 commercial companies
-  - 28 research projects
+- **69 case studies total**
+  - 34 commercial companies
+  - 35 research projects
 
 ## Case List
 
-### Commercial (32 cases)
+### Commercial (34 cases)
 - alphafold3-isomorphic
 - altos-labs-ipsc
 - arctoris-ulysses
@@ -42,11 +42,15 @@ Community-driven database of AI applications in longevity research and aging int
 - retro-biosciences-retrosox
 - rubedo-alembic
 - shift-bioscience-cell-simulator
+- owkin-kpro
 - unity-biotechnology-senolytics
 - unlearn-alzheimers-twins
 - xaira-therapeutics
+- somite-ai
 
-### Research (28 cases)
+### Research (35 cases)
+- agent-laboratory
+- agextend-platform
 - ai-scientist-v2-agentrxiv
 - barabasi-network-medicine
 - brainpath-aging-trajectories
@@ -54,13 +58,17 @@ Community-driven database of AI applications in longevity research and aging int
 - ctrl-dna-regulatory
 - deepscence-duke-senescence
 - delta-project-singapore
+- diagagent-virtual-clinical
 - diffusion-protein-design-2025
 - dignity-aware-elderly-monitoring
 - dunedinpace-brain-aging
 - esm3-esmgfp
+- bio-protocol-ai-co-pilots-evaluation
 - genesis-mission
+- google-ai-coscientist
 - gpt5-wet-lab
 - infosem-sckan-grn
+- kosmos-ai-scientist
 - linage2-clock-benchmarking
 - mount-sinai-ai-center
 - nyu-nmp-senescence
@@ -71,6 +79,7 @@ Community-driven database of AI applications in longevity research and aging int
 - senolytic-translational-test
 - senoreverse-scripps
 - senotrack-nyu-langone
+- sr-scientist-equation-discovery
 - sundial-diffusion-aging
 - tigr-tas-rna-editors
 - trialmatchai
